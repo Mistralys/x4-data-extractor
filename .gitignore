@@ -1,8 +1,10 @@
-composer.phar
 /vendor/
 /output/
-/dev-config.php
+/batch/
+
+dev-config.php
+composer.phar
+
 XRCatTool.exe
 XRCatToolGUI.exe
 Readme.txt
-unpack.bat
