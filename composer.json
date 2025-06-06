@@ -26,6 +26,7 @@
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
-    "build-batches": "Mistralys\\X4\\DataExtractor\\BuildTools::build"
+    "build-batches": "Mistralys\\X4\\DataExtractor\\BuildTools::build",
+    "list-folders": "Mistralys\\X4\\DataExtractor\\BuildTools::listDataFolders"
   }
 }

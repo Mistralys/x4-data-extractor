@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97218fc11616f6a77459dc7f107b0c64",
+    "content-hash": "7ba88e26f4cb42182c3c5cb6be896c5a",
     "packages": [
         {
             "name": "components/jquery",
@@ -822,16 +822,16 @@
         },
         {
             "name": "mistralys/x4-core",
-            "version": "0.0.9",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Mistralys/x4-core.git",
-                "reference": "a7ae4bc79f8b52c0dd7e1750ae552ded4c6ba1d2"
+                "reference": "0dbc48e6426cc0682a4b4987d9ac10de18f45f4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Mistralys/x4-core/zipball/a7ae4bc79f8b52c0dd7e1750ae552ded4c6ba1d2",
-                "reference": "a7ae4bc79f8b52c0dd7e1750ae552ded4c6ba1d2",
+                "url": "https://api.github.com/repos/Mistralys/x4-core/zipball/0dbc48e6426cc0682a4b4987d9ac10de18f45f4f",
+                "reference": "0dbc48e6426cc0682a4b4987d9ac10de18f45f4f",
                 "shasum": ""
             },
             "require": {
@@ -852,6 +852,7 @@
                 "phpunit/phpunit": ">=9.5.20",
                 "roave/security-advisories": "dev-latest"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -871,9 +872,9 @@
             "description": "Core files for all X4 tools.",
             "support": {
                 "issues": "https://github.com/Mistralys/x4-core/issues",
-                "source": "https://github.com/Mistralys/x4-core/tree/0.0.9"
+                "source": "https://github.com/Mistralys/x4-core/tree/main"
             },
-            "time": "2025-05-31T16:57:32+00:00"
+            "time": "2025-06-06T09:03:06+00:00"
         },
         {
             "name": "neitanod/forceutf8",
@@ -3872,6 +3873,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mistralys/x4-core": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
