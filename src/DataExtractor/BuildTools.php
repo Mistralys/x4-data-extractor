@@ -9,7 +9,7 @@ use AppUtils\FileHelper\FileInfo;
 use AppUtils\FileHelper\FolderInfo;
 use AppUtils\FileHelper\JSONFile;
 use Mistralys\X4\ExtractedData\DataFolders;
-use Mistralys\X4\UI\Console;
+use Mistralys\X4\ExtractedData\Console;
 use const Mistralys\X4\X4_CATALOG_TOOL_BINARY;
 use const Mistralys\X4\X4_EXTRACTED_CAT_FILES_FOLDER;
 use const Mistralys\X4\X4_GAME_FOLDER;

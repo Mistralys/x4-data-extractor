@@ -14,19 +14,13 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/geshi/geshi" />
-      <path value="$PROJECT_DIR$/vendor/mck89/peast" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
-      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
       <path value="$PROJECT_DIR$/vendor/neitanod/forceutf8" />
-      <path value="$PROJECT_DIR$/vendor/parsecsv/php-parsecsv" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/application-localization" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/application-utils" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/application-utils-collections" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
@@ -35,7 +29,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/x4-core" />
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
@@ -44,16 +37,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/mistralys/application-utils-core" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/application-utils-image" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/application-utils-result-handling" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/changelog-parser" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/html_quickform2" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/jtokenizer" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/php-sprintf-parser" />
-      <path value="$PROJECT_DIR$/vendor/mistralys/version-parser" />
-      <path value="$PROJECT_DIR$/vendor/components/jquery" />
-      <path value="$PROJECT_DIR$/vendor/thomaspark/bootswatch" />
-      <path value="$PROJECT_DIR$/vendor/fortawesome/font-awesome" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
@@ -62,6 +45,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/mistralys/application-utils-collections" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

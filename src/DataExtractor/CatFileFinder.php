@@ -7,7 +7,7 @@ namespace Mistralys\X4\DataExtractor;
 use AppUtils\FileHelper\FileInfo;
 use AppUtils\FileHelper\FolderInfo;
 use DOMDocument;
-use Mistralys\X4\UI\Console;
+use Mistralys\X4\ExtractedData\Console;
 
 class CatFileFinder
 {
