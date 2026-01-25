@@ -52,12 +52,20 @@ BATCH;
 
             $arguments[] = '-out "'.$outputFolder.'"';
             $commands = [];
+            $commands[] = 'echo -----------------------------------------------------';
+            $commands[] = sprintf('echo EXTRACT: %s', $def['label']);
+            $commands[] = 'echo -----------------------------------------------------';
+            $commands[] = 'echo.';
 
-            // Ensure the output folder exists
+            // Delete the folder if it exists for a clean extraction
+            $commands[] = sprintf('if exist "%1$s" rmdir /S /Q "%1$s"', $outputFolder);
+
+            // Ensure the output folder exists (if not exists just as a failsafe)
             $commands[] = sprintf('if not exist "%1$s" mkdir "%1$s"', $outputFolder);
 
             // Extract command
             $commands[] = X4_CATALOG_TOOL_BINARY.' '.implode(' ', $arguments);
+            $commands[] = 'echo.';
 
             array_push($all, ...$commands);
 
