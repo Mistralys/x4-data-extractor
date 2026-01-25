@@ -8,6 +8,7 @@ use AppUtils\ArrayDataCollection;
 use AppUtils\Collections\BaseStringPrimaryCollection;
 use AppUtils\FileHelper\FolderInfo;
 use AppUtils\FileHelper\JSONFile;
+use const Mistralys\X4\X4_GAME_FOLDER;
 
 /**
  * @method DataFolder getByID(string $id)
@@ -16,45 +17,37 @@ use AppUtils\FileHelper\JSONFile;
  */
 class DataFolders extends BaseStringPrimaryCollection
 {
-    private FolderInfo $extractedDataFolder;
+    public const string FOLDER_VANILLA = 'vanilla';
+    public const string DEFAULT_FOLDER = self::FOLDER_VANILLA;
 
-    public function __construct(FolderInfo $extractedDataFolder)
+    private X4GameInfo $gameInfo;
+
+    public function __construct(X4GameInfo $gameInfo)
     {
-        $this->extractedDataFolder = $extractedDataFolder;
+        $this->gameInfo = $gameInfo;
     }
 
-    private static ?DataFolders $instance = null;
-
-    public static function create(FolderInfo $extractedDataFolder): DataFolders
+    public function getGameInfo(): X4GameInfo
     {
-        if(self::$instance === null) {
-            self::$instance = new self($extractedDataFolder);
-        }
-
-        return self::$instance;
+        return $this->gameInfo;
     }
 
     public function getDefaultID(): string
     {
-        return 'vanilla';
+        return self::DEFAULT_FOLDER;
     }
 
     protected function registerItems(): void
     {
-        foreach($this->extractedDataFolder->getSubFolders() as $dataFolder)
+        foreach($this->gameInfo->getData()->getArray(X4GameInfo::KEY_DATA_FOLDERS) as $dataFolder)
         {
-            $infoFile = $dataFolder->getSubFile('info.json');
-            if(!$infoFile instanceof JSONFile) {
-                continue;
-            }
-
-            $data = ArrayDataCollection::create($infoFile->getData());
+            $data = ArrayDataCollection::create($dataFolder);
 
             $this->registerItem(new DataFolder(
-                $dataFolder,
-                $data->getString('id'),
-                $data->getString('label'),
-                $data->getBool('isExtension')
+                $this,
+                $data->getString(X4GameInfo::KEY_FOLDER_ID),
+                $data->getString(X4GameInfo::KEY_FOLDER_LABEL),
+                $data->getBool(X4GameInfo::KEY_FOLDER_IS_EXTENSION)
             ));
         }
     }

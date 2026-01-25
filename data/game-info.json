@@ -1,0 +1,46 @@
+{
+    "gameVersion": "8.0.0.0",
+    "dateGenerated": "2026-01-25T15:51:16.269465 UTC",
+    "dataFolders": [
+        {
+            "id": "vanilla",
+            "label": "Base game",
+            "isExtension": false
+        },
+        {
+            "id": "ego_dlc_boron",
+            "label": "Kingdom End",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_mini_01",
+            "label": "Hyperion Pack",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_mini_02",
+            "label": "Envoy Pack",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_pirate",
+            "label": "Tides of Avarice",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_split",
+            "label": "Split Vendetta",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_terran",
+            "label": "Cradle of Humanity",
+            "isExtension": true
+        },
+        {
+            "id": "ego_dlc_timelines",
+            "label": "Timelines",
+            "isExtension": true
+        }
+    ]
+}

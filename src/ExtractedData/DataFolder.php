@@ -12,11 +12,11 @@ class DataFolder implements StringPrimaryRecordInterface
     private string $id;
     private string $label;
     private bool $isExtension;
-    private FolderInfo $folder;
+    private DataFolders $collection;
 
-    public function __construct(FolderInfo $folder, string $id, string $label, bool $isExtension = false)
+    public function __construct(DataFolders $collection, string $id, string $label, bool $isExtension = false)
     {
-        $this->folder = $folder;
+        $this->collection = $collection;
         $this->id = $id;
         $this->label = $label;
         $this->isExtension = $isExtension;
@@ -27,9 +27,13 @@ class DataFolder implements StringPrimaryRecordInterface
         return $this->id;
     }
 
-    public function getFolder() : FolderInfo
+    public function getPath() : FolderInfo
     {
-        return $this->folder;
+        return FolderInfo::factory(sprintf(
+            '%s/%s',
+            $this->collection->getGameInfo()->getExtractedDataFolder(),
+            $this->getID()
+        ));
     }
 
     public function getLabel(): string
