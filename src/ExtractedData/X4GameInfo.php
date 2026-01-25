@@ -42,6 +42,7 @@ class X4GameInfo
     public function setInfoFilePath(string $filePath) : self
     {
         $this->infoFilePath = $filePath;
+        $this->data = null;
         return $this;
     }
 
@@ -51,7 +52,12 @@ class X4GameInfo
      */
     public function getDate() : Microtime
     {
-        return $this->getData()->getMicrotime(self::KEY_DATE_GENERATED);
+        $date = $this->getData()->getMicrotime(self::KEY_DATE_GENERATED);
+        if($date !== null) {
+            return $date;
+        }
+
+        return Microtime::createFromString('1975-02-07 18:00:00');
     }
 
     public function getInfoFile()
