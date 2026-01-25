@@ -42,15 +42,54 @@ Remove-Item -Recurse -Force output
 To be able to recognize whether files belong to the base game or a DLC,
 a folder is created for the base game and each DLC separately. 
 This is important for modding, as changing files belonging to a DLC 
-requires using a matching folder structure in mods.
+requires using a matching folder structure in those mods.
 
-### Information Files
+### Programmatic Access
 
-An `info.json` file is generated in each folder, which provides some basic 
-information on the source of the files. The helper class `DataFolders` 
-can be used to access this information.
+When used as a library (installed via Composer), the `X4GameInfo` 
+class can be used to easily access information on the game and
+the available extensions.
 
-This is the JSON generated for the Boron DLC, for example:
+```php
+use \Mistralys\X4\ExtractedData\X4GameInfo;
+
+$gameInfo = X4GameInfo::create();
+
+// The game version, e.g. `8.0.0.0`
+$version = $gameInfo->getGameVersion();
+
+$dataFolders = $gameInfo->getFolderCollection();
+
+// Show a list of all data folders
+foreach($dataFolders->getAll() as $folder)
+{
+    echo $folder->getLabel().PHP_EOL;
+}
+```
+
+### Locally Extracted Folders
+
+When working with a local copy of extracted folders (with
+this tool), set the path to the folder to access the full 
+data folder paths to get at the files contained within.
+
+```php
+use \Mistralys\X4\ExtractedData\X4GameInfo;
+
+$folders = X4GameInfo::create()
+    ->setExtractedDataFolder('/path/to/output/folder')
+    ->getFolderCollection();
+
+foreach($folders->getAll() as $folder) {
+    $path = $folder->getPath();
+}
+```
+
+### Manual Access 
+
+An `info.json` file is generated in each folder, which provides some basic
+information on the source of the files. This is the JSON generated for the 
+Boron DLC, for example:
 
 ```json
 {
@@ -59,7 +98,5 @@ This is the JSON generated for the Boron DLC, for example:
   "isExtension": true
 }
 ```
-
-
 
 [X Catalog Tool]: https://www.egosoft.com/download/x4/bonus_en.php?download=598
