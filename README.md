@@ -24,6 +24,17 @@ output folder.
 
 > Use the `unpack-all.bat` file to extract all files at once.
 
+### Delete Output folder first
+
+To ensure a clean extraction, delete the output folder
+first. You can use this command in PowerShell:
+
+```ps
+Remove-Item -Recurse -Force output
+```
+
+> NOTE: This will run for a while without any progress indication.
+
 ## Accessing Extracted Files
 
 ### Structure 
