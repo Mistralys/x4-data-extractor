@@ -51,9 +51,15 @@ BATCH;
                 ));
 
             $arguments[] = '-out "'.$outputFolder.'"';
-            $command = X4_CATALOG_TOOL_BINARY.' '.implode(' ', $arguments);
+            $commands = [];
 
-            $all[] = $command;
+            // Ensure the output folder exists
+            $commands[] = sprintf('if not exist "%1$s" mkdir "%1$s"', $outputFolder);
+
+            // Extract command
+            $commands[] = X4_CATALOG_TOOL_BINARY.' '.implode(' ', $arguments);
+
+            array_push($all, ...$commands);
 
             $outputFile = FileInfo::factory(__DIR__.'/../../batch/unpack-'.$source.'.bat');
             $outputFile->delete();
@@ -63,7 +69,7 @@ BATCH;
             FileInfo::factory($outputFile)
                 ->putContents(sprintf(
                     self::BATCH_TEMPLATE,
-                    $command
+                    implode(PHP_EOL, $commands)
                 ));
         }
 
