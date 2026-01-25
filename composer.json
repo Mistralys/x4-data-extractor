@@ -15,10 +15,19 @@
       "src"
     ]
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Mistralys\\X4\\Tests\\Classes\\": "tests/classes",
+      "Mistralys\\X4\\Tests\\UnitTests\\": "tests/unit-tests"
+    },
+    "files": [
+      "dev-config.php"
+    ]
+  },
   "require": {
     "mistralys/application-utils-core": ">=2.3.11",
     "mistralys/application-utils-collections": ">=1.1.6",
-    "php": ">=8.2",
+    "php": ">=8.4",
     "ext-dom": "*"
   },
   "require-dev": {
@@ -27,7 +36,7 @@
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
-    "build-batches": "Mistralys\\X4\\DataExtractor\\BuildTools::build",
+    "build": "Mistralys\\X4\\DataExtractor\\BuildTools::build",
     "list-folders": "Mistralys\\X4\\DataExtractor\\BuildTools::listDataFolders"
   }
 }
