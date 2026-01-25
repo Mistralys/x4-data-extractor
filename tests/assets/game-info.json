@@ -1,0 +1,16 @@
+{
+  "gameVersion": "6.00",
+  "dateGenerated": "2023-11-14 20:00:00",
+  "dataFolders": [
+    {
+      "id": "vanilla",
+      "label": "Core Game",
+      "isExtension": false
+    },
+    {
+      "id": "ego_dlc_boron",
+      "label": "Kingdom End",
+      "isExtension": true
+    }
+  ]
+}
