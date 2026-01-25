@@ -8,3 +8,7 @@ composer.phar
 XRCatTool.exe
 XRCatToolGUI.exe
 Readme.txt
+.idea/copilot.data.migration.agent.xml
+.idea/copilot.data.migration.ask.xml
+.idea/copilot.data.migration.ask2agent.xml
+.idea/copilot.data.migration.edit.xml
