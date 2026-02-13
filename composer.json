@@ -36,6 +36,8 @@
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
+    "test": "phpunit",
+    "analyze": "phpstan analyze",
     "build": "Mistralys\\X4\\DataExtractor\\BuildTools::build",
     "list-folders": "Mistralys\\X4\\DataExtractor\\BuildTools::listDataFolders"
   }
