@@ -6,8 +6,19 @@ namespace Mistralys\X4\ExtractedData;
 
 class Console
 {
+    private static bool $enabled = true;
+
+    public static function setEnabled(bool $enabled) : void
+    {
+        self::$enabled = $enabled;
+    }
+
     public static function header(string $message, ...$args) : void
     {
+         if(!self::$enabled) {
+            return;
+        }
+
         if(!empty($args)) {
             $message = vsprintf($message, $args);
         }
@@ -30,6 +41,10 @@ class Console
 
     public static function line(string $message, ...$args) : void
     {
+        if(!self::$enabled) {
+            return;
+        }
+
         if(!empty($args)) {
             $message = vsprintf($message, $args);
         }
@@ -39,6 +54,10 @@ class Console
 
     public static function nl() : void
     {
+        if(!self::$enabled) {
+            return;
+        }
+
         echo PHP_EOL;
     }
 }
