@@ -18,7 +18,7 @@ output folder.
 2. Copy `dev-config.php.dist` to `dev-config.php`.
 3. Edit `dev-config.php` to set the required paths.
 4. Run `composer install` to install the dependencies.
-5. Run `composer build-batches` to generate the batch files.
+5. Run `composer build` to generate the batch files.
 6. Open the `batches` folder in the repository root. 
 7. Run any of the generated batch files to extract the game files.
 
